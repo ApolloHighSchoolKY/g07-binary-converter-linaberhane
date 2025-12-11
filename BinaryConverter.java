@@ -40,15 +40,21 @@ public class BinaryConverter
         return binaryValue;
     }
 
+    public void setBinary(String newBinary)
+    {
+        binaryValue = newBinary;
+    }
+
     public String toBinary()
     {
     	//Convert the integer value to binary
         String ans = "";
-        int binNum = 128;
         int newVal = value;
 
         for(int i = 7; i > -1; i--)
-        {
+        { 
+            int binNum = (int)Math.pow(2,i);
+
             if (newVal < binNum)
                 ans+="0";
             else
@@ -59,6 +65,8 @@ public class BinaryConverter
             binNum /= 2;
             
         }
+
+        binaryValue = ans;
         return "" + ans;
 }
     public int toDecimal()
@@ -75,6 +83,11 @@ public class BinaryConverter
         }
         return ans;
     }
+    
+    public String toString()
+    {
+        return "" + "Your decimal value in binary is: " + toBinary()  + "\n" +
+                    "Your binary value in decimal is: " + toDecimal();
 
-
+    }
 }

@@ -8,11 +8,13 @@ public class BinaryConverterRunner
 
     	System.out.println(steve.getValue());
 
-    	steve.setValue(100);
+    	steve.setValue(10);
 
     	System.out.println(steve.getValue());
 
     	System.out.println(steve.toBinary());
+
+    	System.out.println(steve);
 
     	System.out.println((int)Math.pow(2,4));
 
@@ -20,7 +22,11 @@ public class BinaryConverterRunner
 
     	System.out.println(jane.getBinary());
 
+		jane.setValue(100);
+
     	System.out.println(jane.toDecimal());
+
+    	System.out.println(jane);
     }
 
 
